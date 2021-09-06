@@ -7,12 +7,16 @@ module.exports = (sequelize) => {
       type: DataTypes.STRING,
       allowNull: false,
     },
+    mascota: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
     peso: {
       type: DataTypes.FLOAT,
       allowNull: false
     },
     descripcion: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       allowNull: false
     },
     provincia: {
