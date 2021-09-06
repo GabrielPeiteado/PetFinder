@@ -1,8 +1,40 @@
-const { Product, Categories, Wineries,Pairing } = require("../db");
+const { Pet } = require("../db");
 var sequelize = require("sequelize");
 const {Op} = require("sequelize");
 
-const getAllDogs = async (req, res, next) => {
+const createPet = async (req, res, next) => {
+  const { 
+    name,
+    peso,
+    descripcion,
+    provincia,
+    ciudad,
+    genero,
+    edad,
+    contacto,
+    img
+  } = req.body;
+  try {
+    const pet = await Pet.create({
+      name,
+      peso,
+      descripcion,
+      provincia,
+      ciudad,
+      genero,
+      edad,
+      contacto,
+      img
+    })
+    res.status(200).json(pet)
+  } catch (error) {
+    console.log(error)
+    res.status(500).send(next)
+  }
+}
+
+
+const getAllPets = async (req, res, next) => {
   try {
     if(max && min ){
       var maxmin = await Product.findAll({
@@ -116,7 +148,7 @@ const getAllDogs = async (req, res, next) => {
     next(error);
   }
 };
-const getProductoById = async (req, res) => {
+const getPetById = async (req, res) => {
   try {
     const producto = await Product.findByPk(req.params.id);
     res.json(producto);
@@ -127,6 +159,7 @@ const getProductoById = async (req, res) => {
 };
 
 module.exports = {
-  getAllproducts,
-  getProductoById,
+  createPet,
+  getAllPets,
+  getPetById,
 };

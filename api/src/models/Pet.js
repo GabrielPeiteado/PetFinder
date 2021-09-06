@@ -2,7 +2,7 @@ const {DataTypes} = require("sequelize")
 
 module.exports = (sequelize) => {
   // defino el modelo
-  sequelize.define('perro', {
+  sequelize.define('pet', {
     name: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -31,11 +31,7 @@ module.exports = (sequelize) => {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    contacto: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    img:{
+    img: {
       type: DataTypes.STRING,
       allowNull: false,
     }
