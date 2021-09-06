@@ -15,11 +15,11 @@ module.exports = (sequelize) => {
       type: DataTypes.INTEGER,
       allowNull: false
     },
-    Provincia: {
+    provincia: {
       type: DataTypes.STRING,
       allowNull: false
     },
-    Ciudad: {
+    ciudad: {
       type: DataTypes.STRING,
       allowNull: false
     },
