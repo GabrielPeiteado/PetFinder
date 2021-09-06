@@ -7,7 +7,7 @@ const {
 } = require('../controllers/UsersController');
 
 server.post('/getUser/:id', getUser);
-server.get('/editUser/:id', editUser);
+server.put('/editUser/:id', editUser);
 server.get('/', getAllUsers);
 
 module.exports = server;
