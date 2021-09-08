@@ -8,6 +8,6 @@ const {
 
 server.post('/getUser/:id', getUser);
 server.put('/editUser/:id', editUser);
-server.get('/', getAllUsers);
+server.get('/getAllUsers', getAllUsers);
 
 module.exports = server;
