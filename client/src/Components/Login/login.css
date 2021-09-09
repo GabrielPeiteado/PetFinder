@@ -1,19 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 .landP {
-    color:black;
-    font-family: 'Courier New', Courier, monospace;
+    color:#373741 !important;
+    font-family: 'Poppins', sans-serif;
 }
-
 
 .landP .h3{
     border: 3px solid #fcfcfc;
-    font-size: 40px;
+    font-size: 20px;
     cursor: pointer;
     display: block;
     height: 70px;
     width: 295px;
     font-weight: bold;
-    font-family: 'Helvetica', sans-serif;
-    color:black;
+    font-family: 'Poppins', sans-serif;
+    color:#f0ece7;
     background-color: rgba(26, 166, 247, 0.856);
     transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
     text-transform: uppercase;
@@ -22,7 +22,6 @@
     right: 100px;
 }
 .landP .h3:hover{
-    color: black;
     border: solid 5px whitesmoke;
     box-shadow: 1px 1px 100px 1px whitesmoke;
     
@@ -33,4 +32,14 @@
     margin-left: 850px;
     margin-right: 75px;
     border-radius: 30px;
+}
+.btnAuth0{
+    background-color: transparent;
+    border: 2px solid #373741;
+    padding: 10px 30px;
+    border-radius: 10px;
+}
+.btnAuth0:hover{
+    background-color: #f0ece74b;
+    transition: 1s;
 }
