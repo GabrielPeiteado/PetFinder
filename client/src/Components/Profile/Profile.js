@@ -1,6 +1,6 @@
 import React from "react";
 import { useAuth0 } from "@auth0/auth0-react";
-import "./profile.css"
+import "./Profile.css"
 export const Profile = () => {
   const { user, isAuthenticated, isLoading } = useAuth0();
 
@@ -21,3 +21,4 @@ export const Profile = () => {
     )
   );
 };
+export default Profile;
