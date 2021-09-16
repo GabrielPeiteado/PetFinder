@@ -14,5 +14,17 @@ const rootReducer = (state = initialState, action) => {
               getAllProducts: action.payload
             };
         }
+        case PET_DETAIL: {
+            return {
+              ...state,
+              petDetail: action.payload
+            };
+          }
+          default: {
+            return state;
+          }
     }
+    
+
 }
+export default rootReducer;
